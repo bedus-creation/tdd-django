@@ -18,9 +18,13 @@ virtualenv venv
 ```
 ### Activate virtualEnv
 ```
-source venv/bin/activate
+source env/bin/activate
 ```
 ### Run the server
 ```
 sudo python3 manage.py runserver
+```
+### Run the test
+```
+sudo python3 manage.py test
 ```
