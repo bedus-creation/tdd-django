@@ -1,30 +1,32 @@
 # Installation
 
-### Install python3
+### Install pipenv
 ```
-sudo apt-get install python3
+pipenv shell
 ```
-### Install pip3
+### Install dependency
 ```
-sudo apt-get install python3-pip
-```
-### Install virtual env
-```
-sudo pip3 install virtualenv
-```
-### create virtualenv
-```
-virtualenv venv 
-```
-### Activate virtualEnv
-```
-source env/bin/activate
-```
+pipenv install
+``` 
+
 ### Run the server
 ```
-sudo python3 manage.py runserver
+python3 manage.py runserver
 ```
 ### Run the test
 ```
-sudo python3 manage.py test
+python3 manage.py test
+```
+
+### Migrate Database
+```
+python3 manage.py migrate
+```
+
+#### Steps to setup a new Model
+* First Create a class inside a models.py file.
+* Define Class attruibutes. (Class attributes will be the table columns.)
+* Create migrations for that class
+```
+python mmanage.py makemigrations
 ```
