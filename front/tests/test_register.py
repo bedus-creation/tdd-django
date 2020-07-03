@@ -13,6 +13,8 @@ class RegisterTest(TestCase):
 
     def test_form_is_valid_for_given_data(self):
         data = {
+            'first_name': 'Bedram',
+            'last_name': 'Tamang',
             'email': 'tmgbedu@gmail.com',
             'password1': '#bedu123TamanG',
             'password2': '#bedu123TamanG',
@@ -22,6 +24,8 @@ class RegisterTest(TestCase):
 
     def test_guest_can_register_into_the_system(self):
         data = {
+            'first_name': 'Bedram',
+            'last_name': 'Tamang',
             'email': 'tmgbedu@gmail.com',
             'password1': '#bedu123TamanG',
             'password2': '#bedu123TamanG',
@@ -34,3 +38,5 @@ class RegisterTest(TestCase):
         User = get_user_model()
         self.assertEqual(User.objects.count(), 1)
         self.assertEqual(User.objects.first().email, data['email'])
+        self.assertEqual(User.objects.first().first_name, data['first_name'])
+        self.assertEqual(User.objects.first().last_name, data['last_name'])
