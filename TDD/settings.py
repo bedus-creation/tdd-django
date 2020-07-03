@@ -124,4 +124,4 @@ STATIC_URL = '/static/'
 
 TEST_RUNNER = "redgreenunittest.django.runner.RedGreenDiscoverRunner"
 
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
