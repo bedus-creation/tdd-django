@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'App.apps.BlogConfig',
+    'front',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -123,3 +123,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TEST_RUNNER = "redgreenunittest.django.runner.RedGreenDiscoverRunner"
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

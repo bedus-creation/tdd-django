@@ -1,4 +1,4 @@
 {
     "git.ignoreLimitWarning": true,
-    "python.pythonPath": "/home/ellite/.local/share/virtualenvs/TDD-1y1elcLD/bin/python"
+    "python.pythonPath": "/usr/bin/python3"
 }

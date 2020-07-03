@@ -11,11 +11,11 @@ pipenv install
 
 ### Run the server
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 ### Run the test
 ```
-python3 manage.py test
+python manage.py test
 ```
 
 ### Migrate Database
