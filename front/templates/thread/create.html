@@ -1,0 +1,12 @@
+{% extends "themes/app.html" %}
+
+{% block body %}
+<form action="/thread/create" method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.title.errors }}
+        {{ form.title }}
+    </div>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
