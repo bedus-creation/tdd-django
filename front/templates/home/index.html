@@ -1,5 +1,12 @@
 {% extends "themes/app.html" %}
 
 {% block content %}
-
+<div class="container mx-auto px-6 lg:px-20 ">
+    Lists
+    <ul>
+        {% for post in posts %}
+        <li><a href="/thread/{{post.slug}}">{{post.title}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

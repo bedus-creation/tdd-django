@@ -8,20 +8,10 @@ from front.forms.ThreadCreateForm import ThreadCreateForm
 class ThreadView(FormView):
     template_name = 'thread/create.html'
     form_class = ThreadCreateForm
-    success_url = '/thread/create'
+    success_url = '/'
 
     def form_valid(self, form):
-        messages.success(self.request, 'Congratulations ! Thread has been created.')
+        form.save()
+        messages.success(
+            self.request, 'Congratulations ! Thread has been created.')
         return super().form_valid(form)
-
-    # def get(self, request):
-    #     form = ThreadCreateForm()
-    #     return render(request, "thread/create.html", {'form': form})
-
-    # def post(self, request):
-    #     form = ThreadCreateForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         messages.success(
-    #             request, 'Congratulations ! Thread has been created.')
-    #         return HttpResponseRedirect('/thread/create')
