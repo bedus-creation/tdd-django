@@ -30,3 +30,9 @@ python3 manage.py migrate
 ```
 python mmanage.py makemigrations
 ```
+
+## Things to be done
+- [ ]  Static Files
+- [ ]  Learn about Django-q
+- [ ] Perform More testing
+- [ ] Work with postgres database
