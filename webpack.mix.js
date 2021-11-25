@@ -1,8 +1,6 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 
-require('laravel-mix-purgecss');
-
 mix.webpackConfig({
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -21,4 +19,4 @@ mix.js('resources/js/app.js', 'static/js')
 mix.sass('resources/sass/app.scss', 'static/css');
 mix.postCss('resources/sass/tailwind.css', 'static/css', [
     require('tailwindcss'),
-]).purgeCss();
+]);
