@@ -14,8 +14,9 @@
 <body style="font-family:Roboto">
     <div id="app">
         <div class="w-full h-screen bg-gray-300 flex items-center justify-center">
-            <form method="POST" action="http://papernepal.test/jobseeker/register"
+            <form method="POST" action="/register"
                 class="w-full md:w-1/3 bg-white rounded-lg py-10">
+                {% csrf_token %}
                 <input type="hidden" name="_token" value="0NJFNlmxKlbtfMTM0KkQFmZrvI4UUWRc1LFEkDTI">
                 <div class="flex font-bold justify-center">
                     <img class="h-20 w-20"
@@ -34,9 +35,7 @@
                     <div class="w-full mb-2">
                         <div class="flex items-center">
                             <i class='ml-3 fill-current text-gray-400 text-xs z-10 fas fa-at'></i>
-                            <input type='email' name="email" placeholder="Email"
-                                class="-mx-6 px-8  w-full border rounded px-3 py-2 text-gray-700 focus:outline-none"
-                                required />
+                            {{ form.email }}
                         </div>
                     </div>
                     <div class="w-full mb-2">

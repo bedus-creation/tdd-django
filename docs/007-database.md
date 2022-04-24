@@ -1,6 +1,6 @@
 # Django Database
 
-## Django Models
+### Django Models
 For example: Suppose our application is blogging application, which needs a table **posts** in database to store our blog article. Create a file **posts.py** inside models folder of your apps.
 
 ```python
@@ -20,6 +20,26 @@ python manage.py makemigrations
 ```
 
 Executing the above command creates a migrations folders inside your application, which contains migration files. Migration file will responsible for creating as well as modifying database schemas. Run the below command to create posts table in our database.
+```bash
+python manage.py migrate
+```
+
+### Updating Migrations/Models
+Consider adding `id` column as primary key by manual(although it is automatically added by django itself) as
+
+```python
+class Posts(models.Model):
+    id = models.BigAutoField(primary_key=True)
+```
+
+The migrations can be added as
+
+```bash
+python manage.py makemigrations
+```
+
+and then migrate as
+
 ```bash
 python manage.py migrate
 ```

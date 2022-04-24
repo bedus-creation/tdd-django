@@ -1,9 +1,12 @@
 from django.db import models
 from django.utils.text import slugify
+
+
 # Create your models here.
 
 
 class Posts(models.Model):
+    id = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=100)
     slug = models.SlugField(
         default='',
