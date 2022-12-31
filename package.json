@@ -13,11 +13,11 @@
         "axios": "^0.21",
         "babel-plugin-syntax-dynamic-import": "^6.18.0",
         "cross-env": "^5.1",
-        "laravel-mix": "^3.0",
+        "laravel-mix": "^6.0",
         "laravel-mix-purgecss": "^4.1.0",
         "lodash": "^4.17.19",
         "tailwindcss": "^1.1.2",
         "vue": "^2.5.7",
-        "sass-loader": "^7.1.0"
+        "sass-loader": "^13.2.0"
     }
 }
